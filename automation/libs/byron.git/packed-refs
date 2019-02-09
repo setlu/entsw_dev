@@ -1,0 +1,11 @@
+# pack-refs with: peeled fully-peeled 
+dc3696cc65c778dc73f3ba6aa8185286471313f9 refs/remotes/origin/development
+1d614b55d548661d90f53bf2e5baf2f5cbf8a481 refs/remotes/origin/df_libs_update
+8771e6d2f59c3b550528479d3de44ad21aea7fc9 refs/remotes/origin/feature/aziz/cat4poe
+c0c23407aeefd79443df32e5e670a1c3e100b123 refs/remotes/origin/feature/aziz/poe
+aa91b882c8820ad6a3c4ddcde31adcc9594cabeb refs/remotes/origin/feature/esolano/quake1
+29a888e2237035e9b0cffab7f1ad4a42715c1c62 refs/remotes/origin/feature/krauss/cat4sup
+93985f6c4d464143f52e90ee3cf97abda7721b48 refs/remotes/origin/feature/lusherma/cat4sup
+dc3696cc65c778dc73f3ba6aa8185286471313f9 refs/remotes/origin/feature/rockytl/franklin_dev
+6375039176bebdb0f6742b2b5c4c096487bffb16 refs/remotes/origin/franklin_components
+1d614b55d548661d90f53bf2e5baf2f5cbf8a481 refs/remotes/origin/master

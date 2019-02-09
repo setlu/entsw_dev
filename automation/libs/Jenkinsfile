@@ -1,0 +1,54 @@
+pipeline {
+    agent {
+        node {
+            label 'lib_node'
+        }
+    }
+    environment {
+        PIPELINED = '1'
+    }
+    stages {
+        stage('Stage 1: Pre-Check') {
+            steps {
+                sh 'echo "Stage 1!"'
+                sh 'python --version'
+                sh 'ls -al $WORKSPACE'
+            }
+        }
+        stage('Stage 2: Code Check (PEP8)') {
+            steps {
+                sh 'echo "Stage 2"'
+                sh 'cd $WORKSPACE; pep8 *.py --count --ignore=E221,E241,E731,E126 --max-line-length=160 --format=pylint | tee $WORKSPACE/pep8run.txt'
+            }
+        }
+        stage('Stage 3: Code Check (Pyflakes)') {
+            steps {
+                sh 'echo "Stage 3"'
+            }
+        }
+        stage('Stage 4: Unittests') {
+            steps {
+                sh 'echo "Stage 4"'
+                sh 'cd $WORKSPACE; pytest -v --collect-only'
+                sh 'cd $WORKSPACE; pytest -v | tee $WORKSPACE/pytestrun.txt'
+            }
+        }
+    }
+    post {
+        always {
+            echo 'EntSw libs Pipeline.'
+        }
+        success {
+            echo 'Pipeline was SUCCESSFUL.'
+        }
+        failure {
+            echo 'Pipeline FAILED.'
+        }
+        unstable {
+            echo 'Pipeline UNSTABLE.'
+        }
+        changed {
+            echo 'Pipeline state has changed from previous run!'
+        }
+    }
+}

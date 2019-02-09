@@ -1,0 +1,6 @@
+# pack-refs with: peeled fully-peeled 
+a2a7ae4bf95d61b59a9039fa2ca050eac83260b8 refs/remotes/origin/development
+f7fb49a45a1ea9d8e9907d7d086f34db609c8d1a refs/remotes/origin/feature/aziz/cat4poe
+a005c83afb7eb9d95d5738ab835a93d9a1811709 refs/remotes/origin/feature/esolano/quake_jmx
+a2a7ae4bf95d61b59a9039fa2ca050eac83260b8 refs/remotes/origin/feature/rockytl/franklin_dev
+30163fc7867e631234f440a3135c90159b693c60 refs/remotes/origin/master
